@@ -6,7 +6,7 @@ program
   .option("-e, --email <type>", "user email")
   .option("-p, --phone <type>", "user phone");
 
-import * as contacts from "./contacts.js";
+import * as contacts from "./src/contacts.js";
 
 program.parse();
 
