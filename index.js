@@ -6,7 +6,7 @@ program
   .option("-e, --email <type>", "user email")
   .option("-p, --phone <type>", "user phone");
 
-import * as contacts from "./src/contacts.js";
+import * as contacts from "./contacts.js";
 
 program.parse();
 
@@ -17,7 +17,7 @@ async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
       const allContact = await contacts.listContacts();
-      return console.log(allContact);
+      return console.table(allContact);
       break;
 
     case "get":
